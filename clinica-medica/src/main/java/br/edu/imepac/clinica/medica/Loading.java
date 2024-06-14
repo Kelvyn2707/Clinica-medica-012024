@@ -28,53 +28,53 @@ public class Loading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        painelLoading = new javax.swing.JPanel();
         progresso = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
+        txtNomeClinica = new javax.swing.JLabel();
         porcentagem = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        painelLoading.setBackground(new java.awt.Color(0, 153, 153));
 
         progresso.setBackground(new java.awt.Color(255, 255, 255));
         progresso.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         progresso.setForeground(new java.awt.Color(0, 124, 104));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Joy Clínica");
+        txtNomeClinica.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomeClinica.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        txtNomeClinica.setForeground(new java.awt.Color(255, 255, 255));
+        txtNomeClinica.setText("Joy Clínica");
 
         porcentagem.setBackground(new java.awt.Color(0, 0, 0));
         porcentagem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         porcentagem.setForeground(new java.awt.Color(255, 255, 255));
         porcentagem.setText("100%");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelLoadingLayout = new javax.swing.GroupLayout(painelLoading);
+        painelLoading.setLayout(painelLoadingLayout);
+        painelLoadingLayout.setHorizontalGroup(
+            painelLoadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelLoadingLayout.createSequentialGroup()
+                .addGroup(painelLoadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelLoadingLayout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(progresso, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(painelLoadingLayout.createSequentialGroup()
                         .addGap(341, 341, 341)
                         .addComponent(porcentagem, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(painelLoadingLayout.createSequentialGroup()
                         .addGap(249, 249, 249)
-                        .addComponent(jLabel1)))
+                        .addComponent(txtNomeClinica)))
                 .addContainerGap(91, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        painelLoadingLayout.setVerticalGroup(
+            painelLoadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLoadingLayout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNomeClinica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(progresso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -86,11 +86,11 @@ public class Loading extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(painelLoading, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelLoading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -145,9 +145,9 @@ public class Loading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel painelLoading;
     private javax.swing.JLabel porcentagem;
     private javax.swing.JProgressBar progresso;
+    private javax.swing.JLabel txtNomeClinica;
     // End of variables declaration//GEN-END:variables
 }

@@ -29,58 +29,63 @@ public class TelaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        txtLogin = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JLabel();
+        txtSenha = new javax.swing.JLabel();
         nomeUsuario = new javax.swing.JTextField();
         senhaUsuario = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botaoAcessar = new javax.swing.JButton();
+        botaoFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 160));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel1.setBackground(new java.awt.Color(164, 234, 203));
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Login");
+        txtLogin.setBackground(new java.awt.Color(164, 234, 203));
+        txtLogin.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        txtLogin.setForeground(new java.awt.Color(255, 255, 255));
+        txtLogin.setText("Login");
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Usuario");
+        txtUsuario.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setText("Usuario");
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Senha");
+        txtSenha.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenha.setText("Senha");
 
+        nomeUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        nomeUsuario.setForeground(new java.awt.Color(0, 0, 0));
         nomeUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeUsuarioActionPerformed(evt);
             }
         });
 
+        senhaUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        senhaUsuario.setForeground(new java.awt.Color(0, 0, 0));
         senhaUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaUsuarioActionPerformed(evt);
             }
         });
 
-        jButton1.setForeground(new java.awt.Color(0, 153, 153));
-        jButton1.setText("Acessar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoAcessar.setBackground(new java.awt.Color(255, 255, 255));
+        botaoAcessar.setForeground(new java.awt.Color(0, 153, 153));
+        botaoAcessar.setText("Acessar");
+        botaoAcessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoAcessarActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 0, 0));
-        jButton2.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
-        jButton2.setText("X");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botaoFechar.setBackground(new java.awt.Color(204, 0, 0));
+        botaoFechar.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
+        botaoFechar.setText("X");
+        botaoFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botaoFecharActionPerformed(evt);
             }
         });
 
@@ -91,18 +96,18 @@ public class TelaLogin extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSenha)
+                    .addComponent(botaoAcessar, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(senhaUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                         .addComponent(nomeUsuario, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jLabel2))
+                    .addComponent(txtUsuario))
                 .addContainerGap(117, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(148, 148, 148)
-                .addComponent(jLabel1)
+                .addComponent(txtLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addComponent(botaoFechar))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,18 +115,18 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel1))
-                    .addComponent(jButton2))
+                        .addComponent(txtLogin))
+                    .addComponent(botaoFechar))
                 .addGap(44, 44, 44)
-                .addComponent(jLabel2)
+                .addComponent(txtUsuario)
                 .addGap(18, 18, 18)
                 .addComponent(nomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(jLabel3)
+                .addComponent(txtSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(senhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
-                .addComponent(jButton1)
+                .addComponent(botaoAcessar)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -148,16 +153,16 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaUsuarioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botaoAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessarActionPerformed
        if(nomeUsuario.getText().equals("root") &&
             senhaUsuario.getPassword().equals("123")) {
            JOptionPane.showMessageDialog(this, "Acesso permitido!");
        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botaoAcessarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void botaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFecharActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botaoFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,13 +200,13 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton botaoAcessar;
+    private javax.swing.JButton botaoFechar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nomeUsuario;
     private javax.swing.JPasswordField senhaUsuario;
+    private javax.swing.JLabel txtLogin;
+    private javax.swing.JLabel txtSenha;
+    private javax.swing.JLabel txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

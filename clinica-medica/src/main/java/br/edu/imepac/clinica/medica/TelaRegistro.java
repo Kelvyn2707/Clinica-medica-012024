@@ -26,152 +26,115 @@ public class TelaRegistro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        nomeUsuario = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        barraMenu = new javax.swing.JMenuBar();
+        inicio = new javax.swing.JMenu();
+        consulta = new javax.swing.JMenu();
+        agendarConsulta = new javax.swing.JMenuItem();
+        pesquisarConsulta = new javax.swing.JMenuItem();
+        reagendarConsulta = new javax.swing.JMenuItem();
+        cancelarConsulta = new javax.swing.JMenuItem();
+        pacientes = new javax.swing.JMenu();
+        medicos = new javax.swing.JMenu();
+        usuarios = new javax.swing.JMenu();
+        cadastrarUsuario = new javax.swing.JMenuItem();
+        consultarUsuario = new javax.swing.JMenuItem();
+        alterarUsuario = new javax.swing.JMenuItem();
+        excluirUsuario = new javax.swing.JMenuItem();
+        opcoes = new javax.swing.JMenu();
+        sair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        inicio.setText("Início");
+        barraMenu.add(inicio);
 
-        jLabel1.setBackground(new java.awt.Color(164, 234, 203));
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cadastro");
+        consulta.setText("Consultas");
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nome");
+        agendarConsulta.setText("Agendar");
+        consulta.add(agendarConsulta);
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Estado");
-
-        nomeUsuario.addActionListener(new java.awt.event.ActionListener() {
+        pesquisarConsulta.setText("Pesquisar");
+        pesquisarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeUsuarioActionPerformed(evt);
+                pesquisarConsultaActionPerformed(evt);
             }
         });
+        consulta.add(pesquisarConsulta);
 
-        jButton2.setBackground(new java.awt.Color(204, 0, 0));
-        jButton2.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
-        jButton2.setText("X");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        reagendarConsulta.setText("Reagendar");
+        consulta.add(reagendarConsulta);
+
+        cancelarConsulta.setText("Cancelar");
+        consulta.add(cancelarConsulta);
+
+        barraMenu.add(consulta);
+
+        pacientes.setText("Pacientes");
+        barraMenu.add(pacientes);
+
+        medicos.setText("Médicos");
+        barraMenu.add(medicos);
+
+        usuarios.setText("Usuários");
+
+        cadastrarUsuario.setText("Cadastrar");
+        cadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cadastrarUsuarioActionPerformed(evt);
             }
         });
+        usuarios.add(cadastrarUsuario);
 
-        jButton1.setForeground(new java.awt.Color(0, 153, 153));
-        jButton1.setText("Registrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        consultarUsuario.setText("Consultar");
+        usuarios.add(consultarUsuario);
+
+        alterarUsuario.setText("Alterar");
+        alterarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                alterarUsuarioActionPerformed(evt);
             }
         });
+        usuarios.add(alterarUsuario);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MG", "SP", "RS", "BA", "PA", "SC", "AM", "AC", "RO", "RR", " " }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
+        excluirUsuario.setText("Excluir");
+        usuarios.add(excluirUsuario);
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Cd");
+        barraMenu.add(usuarios);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vitallis", "Unimed", "ForLife", "IPSM", "Amil", "Bradesco", "Notredame", "Porto Seguro" }));
+        opcoes.setText("Opções");
+        barraMenu.add(opcoes);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(nomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3))
-                                .addGap(147, 147, 147)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addComponent(jLabel1)))
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton2)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addComponent(jButton1)
-                .addGap(58, 58, 58))
-        );
+        sair.setText("Sair");
+        barraMenu.add(sair);
+
+        setJMenuBar(barraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 594, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 426, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeUsuarioActionPerformed
+    private void alterarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeUsuarioActionPerformed
+    }//GEN-LAST:event_alterarUsuarioActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void cadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_cadastrarUsuarioActionPerformed
+
+    private void pesquisarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarConsultaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pesquisarConsultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,15 +173,21 @@ public class TelaRegistro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nomeUsuario;
+    private javax.swing.JMenuItem agendarConsulta;
+    private javax.swing.JMenuItem alterarUsuario;
+    private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JMenuItem cadastrarUsuario;
+    private javax.swing.JMenuItem cancelarConsulta;
+    private javax.swing.JMenu consulta;
+    private javax.swing.JMenuItem consultarUsuario;
+    private javax.swing.JMenuItem excluirUsuario;
+    private javax.swing.JMenu inicio;
+    private javax.swing.JMenu medicos;
+    private javax.swing.JMenu opcoes;
+    private javax.swing.JMenu pacientes;
+    private javax.swing.JMenuItem pesquisarConsulta;
+    private javax.swing.JMenuItem reagendarConsulta;
+    private javax.swing.JMenu sair;
+    private javax.swing.JMenu usuarios;
     // End of variables declaration//GEN-END:variables
 }
