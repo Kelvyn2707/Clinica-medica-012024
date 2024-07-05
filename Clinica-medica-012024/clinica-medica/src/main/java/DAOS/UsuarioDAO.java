@@ -11,7 +11,7 @@ public class UsuarioDAO {
 
     public UsuarioDAO() {
         try {
-            String url = "jdbc:mysql://localhost:3306/clinica";
+            String url = "jdbc:mysql://localhost:3306/clinica_medica";
             String user = "root";
             String password = "1234";
             conn = DriverManager.getConnection(url, user, password);
@@ -48,6 +48,26 @@ public class UsuarioDAO {
         return usuarios;
     }
 
+    public List<Usuario> getUsuariosPorNome(String nome) {
+        List<Usuario> usuarios = new ArrayList<>();
+        String sql = "SELECT * FROM Usuario WHERE nome LIKE ?";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, "%" + nome + "%");
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Usuario usuario = new Usuario();
+                    usuario.setId(rs.getInt("id"));
+                    usuario.setNome(rs.getString("nome"));
+                    usuario.setEmail(rs.getString("email"));
+                    usuario.setSenha(rs.getString("senha"));
+                    usuarios.add(usuario);
+                }
+            }
+        } catch (SQLException e) {
+        }
+        return usuarios;
+    }
+    
     public Usuario getUsuarioById(int id) {
         String sql = "SELECT * FROM Usuario WHERE id = ?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -108,7 +128,12 @@ public class UsuarioDAO {
         return null;
     }
 
-    public void cadastrarUsuario(Usuario usuario) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean cadastrarUsuario(Usuario usuario) {
+        try {
+            addUsuario(usuario);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

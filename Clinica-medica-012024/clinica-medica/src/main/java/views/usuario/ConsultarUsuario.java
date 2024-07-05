@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package views.usuario;
 
-/**
- *
- * @author Usuario
- */
+import views.geral.TelaPrincipal;
+
 public class ConsultarUsuario extends javax.swing.JFrame {
     
     public ConsultarUsuario() {
@@ -27,9 +21,7 @@ public class ConsultarUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        botaoFecharConsUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,7 +31,7 @@ public class ConsultarUsuario extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Consultar Usuários");
 
-        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setForeground(new java.awt.Color(0, 0, 0));
 
         jTable1.setBackground(new java.awt.Color(15, 167, 167));
         jTable1.setForeground(new java.awt.Color(255, 255, 255));
@@ -47,7 +39,29 @@ public class ConsultarUsuario extends javax.swing.JFrame {
             new Object [][] {
                 {"1", "João da Silva", "joao@gmail.com"},
                 {"2", "Maria Souza", "maria@gmail.com"},
-                {"...", "...", "..."}
+                {"3", "Pedro Santos", "pedro@gmail.com"},
+                {"4", "Ana Costa", "ana@gmail.com"},
+                {"5", "Carlos Pereira", "carlos@gmail.com"},
+                {"6", "Beatriz Souza", "beatriz@gmail.com"},
+                {"7", "Lucas Almeida", "lucas@gmail.com"},
+                {"8", "Júlia Ferreira", "julia@gmail.com"},
+                {"9", "Bruno Lima", "bruno@gmail.com"},
+                {"10", "Fernanda Rocha", "fernanda@gmail.com"},
+                {"11", "Kelvyn", "kelvyn@gmail.com"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
                 "ID", "Nome", "Email"
@@ -61,19 +75,25 @@ public class ConsultarUsuario extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jTable1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nome:");
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 153, 160));
-        jButton1.setText("Buscar");
-
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        botaoFecharConsUsuario.setBackground(new java.awt.Color(204, 0, 0));
+        botaoFecharConsUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        botaoFecharConsUsuario.setText("X");
+        botaoFecharConsUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoFecharConsUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,28 +103,18 @@ public class ConsultarUsuario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(258, 258, 258)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1)
-                .addGap(65, 65, 65)
-                .addComponent(jButton1)
-                .addGap(94, 94, 94))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoFecharConsUsuario))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(28, 28, 28)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(botaoFecharConsUsuario))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,6 +130,16 @@ public class ConsultarUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
+       
+    }//GEN-LAST:event_jTable1AncestorAdded
+
+    private void botaoFecharConsUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFecharConsUsuarioActionPerformed
+        this.dispose();
+        TelaPrincipal telaP = new TelaPrincipal();
+        telaP.setVisible(true);
+    }//GEN-LAST:event_botaoFecharConsUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,12 +177,10 @@ public class ConsultarUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton botaoFecharConsUsuario;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

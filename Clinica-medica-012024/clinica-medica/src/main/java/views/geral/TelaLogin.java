@@ -6,15 +6,8 @@ package views.geral;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Usuario
- */
 public class TelaLogin extends javax.swing.JFrame {
-
-    /**
-     * Creates new form TelaLogin
-     */
+    
     public TelaLogin() {
         initComponents();
     }
@@ -155,10 +148,15 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaUsuarioActionPerformed
 
     private void botaoAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessarActionPerformed
-       if(nomeUsuario.getText().equals("root") &&
-            senhaUsuario.getPassword().equals("123")) {
-           JOptionPane.showMessageDialog(this, "Acesso permitido!");
-       }
+        
+        if(new String(senhaUsuario.getPassword()).equals("admin") && nomeUsuario.getText().equals("AdmMarcos")){
+           JOptionPane.showMessageDialog(null, "Bem vindo Adm Marcos");
+           this.dispose();
+           TelaPrincipal tp = new TelaPrincipal();
+           tp.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatórios!");
+        }
     }//GEN-LAST:event_botaoAcessarActionPerformed
 
     private void botaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFecharActionPerformed

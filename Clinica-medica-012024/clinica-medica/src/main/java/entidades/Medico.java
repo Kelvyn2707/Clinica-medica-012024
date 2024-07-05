@@ -11,32 +11,46 @@ package entidades;
 
 public class Medico {
     private int id;
-    private String nome;
+    private String nomeMedico;
     private String crm;
     private String especialidade;
+    private String senhaMedico;
+    
+    public Medico(String nomeUsuario, String senhaUsuario){
+        this.senhaMedico = senhaMedico ;
+        this.nomeMedico = nomeMedico;
+    }
 
     
-    public int getId() { 
+    public int getIdMedico() { 
         return id; }
     
-    public void setId(int id) { 
+    public void setIdMedico(int id) { 
         this.id = id; }
 
-    public String getNome() { 
-        return nome; }
+    public String getNomeMedico() { 
+        return nomeMedico; }
     
-    public void setNome(String nome) { 
-        this.nome = nome; }
+    public void setNomeMedico(String nome) { 
+        this.nomeMedico = nome; }
 
-    public String getCrm() { 
+    public String getCrmMedico() { 
         return crm; }
     
-    public void setCrm(String crm) { 
+    public void setCrmMedico(String crm) { 
         this.crm = crm; }
 
-    public String getEspecialidade() { 
+    public String getEspecialidadeMedico() { 
         return especialidade; }
     
-    public void setEspecialidade(String especialidade) { 
+    public void setEspecialidadeMedico(String especialidade) { 
         this.especialidade = especialidade; }
+
+    public String getSenhaMedico() {
+        return senhaMedico;
+    }
+
+    public void setSenhaMedico(String senha) {
+        this.senhaMedico = senha;
+    }
 }
