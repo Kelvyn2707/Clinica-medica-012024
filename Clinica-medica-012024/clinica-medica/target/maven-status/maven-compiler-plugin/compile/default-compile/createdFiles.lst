@@ -1,3 +1,4 @@
+views\funcionarios\ConsultarFuncionarios$4.class
 views\consulta\TabelaConsultas.class
 views\geral\TelaPrincipal$7.class
 view\especialidade\FuncoesEspecialidade$4.class
@@ -25,6 +26,7 @@ views\consulta\AgendaConsulta.class
 entidades\Prontuario.class
 views\consulta\TelaConsultas$2.class
 view\convenio\Convenios$1.class
+views\funcionarios\ConsultarFuncionarios$3.class
 views\geral\TelaPrincipal$10.class
 views\usuario\CadastrarUsuario$3.class
 views\geral\TelaPrincipal$1.class
@@ -59,7 +61,9 @@ view\medico\TelaMedico$2.class
 views\geral\TelaPrincipal$12.class
 DAOS\MedicoDAO.class
 entidades\Especialidade.class
+views\funcionarios\ConsultarFuncionarios$2.class
 view\medico\TelaMedico.class
+views\funcionarios\ConsultarFuncionarios.class
 views\geral\TelaLogin$3.class
 views\geral\TelaPrincipal$8.class
 entidades\Medico.class
@@ -78,6 +82,7 @@ views\usuario\CadastrarUsuario.class
 views\usuario\CadastrarUsuario$1.class
 views\geral\TelaPrincipal.class
 DAOS\FuncionarioDAO.class
+views\funcionarios\ConsultarFuncionarios$1.class
 view\convenio\Convenios.class
 views\geral\TelaPrincipal$9.class
 DAOS\UsuarioDAO.class

@@ -96,7 +96,7 @@ public class TelaLogin extends javax.swing.JFrame {
                         .addComponent(senhaUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                         .addComponent(nomeUsuario, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(txtUsuario))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(148, 148, 148)
                 .addComponent(txtLogin)
